@@ -79,6 +79,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap:VirtualizedContainerService.HintSize="725,712" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -116,7 +117,7 @@
           <av:PointCollection x:Key="ConnectorLocation">130,306 130,356</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[rutaComparendo+&quot;C2.xlsx&quot;]">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[rutaComparendo+&quot;Archivo comparendos_.xlsx&quot;]">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
@@ -165,7 +166,7 @@
             <ui:PathExists DisplayName="Path Exists" Exists="[archivo]" sap:VirtualizedContainerService.HintSize="579,89" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[rutaComparendo+&quot;DATOS\&quot;+&quot;InformacionConsultada&quot;+&quot; &quot;+horaArchivo+&quot;.xlsx&quot;]" PathType="File" />
             <If Condition="[archivo]" sap:VirtualizedContainerService.HintSize="579,315" sap2010:WorkflowViewState.IdRef="If_6">
               <If.Else>
-                <ui:CopyFile ContinueOnError="{x:Null}" Destination="[rutaComparendo+&quot;DATOS\&quot;+&quot;InformacionConsultada&quot;+&quot; &quot;+horaArchivo+&quot;.xlsx&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[rutaComparendo+&quot;C2.xlsx&quot;]">
+                <ui:CopyFile ContinueOnError="{x:Null}" Destination="[rutaComparendo+&quot;DATOS\&quot;+&quot;InformacionConsultada&quot;+&quot; &quot;+horaArchivo+&quot;.xlsx&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[rutaComparendo+&quot;Archivo comparendos_.xlsx&quot;]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -227,7 +228,7 @@
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                                 <ui:CommentOut.Body>
-                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="526,1921" sap2010:WorkflowViewState.IdRef="Sequence_113">
+                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="526,2834" sap2010:WorkflowViewState.IdRef="Sequence_113">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -342,10 +343,10 @@
                                         </ui:Target>
                                       </ui:UiElementExists.Target>
                                     </ui:UiElementExists>
-                                    <If Condition="[expira]" sap:VirtualizedContainerService.HintSize="484,334" sap2010:WorkflowViewState.IdRef="If_20">
+                                    <If Condition="[expira]" sap:VirtualizedContainerService.HintSize="484,374" sap2010:WorkflowViewState.IdRef="If_20">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
@@ -405,10 +406,10 @@
                                         </ui:Target>
                                       </ui:ImageFound.Target>
                                     </ui:ImageFound>
-                                    <If Condition="[ErrorContrasenia]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_8">
+                                    <If Condition="[ErrorContrasenia]" sap:VirtualizedContainerService.HintSize="484,924" sap2010:WorkflowViewState.IdRef="If_8">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
@@ -491,7 +492,7 @@
                               </ui:CommentOut>
                             </Sequence>
                             <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="2168,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-                            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="2168,14044" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_11" InstanceCachePeriod="3000" WorkbookPath="C:\Users\jparra\OneDrive\RPA\COMPARENDOS\COMPARENDOSV2\22-10-2021.xlsx">
+                            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="2168,14044" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_11" InstanceCachePeriod="3000" WorkbookPath="[rutaComparendo+&quot;DATOS\&quot;+&quot;InformacionConsultada&quot;+&quot; &quot;+horaArchivo+&quot;.xlsx&quot;]">
                               <ui:ExcelApplicationScope.Body>
                                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                   <ActivityAction.Argument>
@@ -905,7 +906,7 @@
                                                                                 <ActivityAction.Argument>
                                                                                   <DelegateInArgument x:TypeArguments="ui:UiElement" Name="item" />
                                                                                 </ActivityAction.Argument>
-                                                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1031,8223" sap2010:WorkflowViewState.IdRef="Sequence_90">
+                                                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="917,8223" sap2010:WorkflowViewState.IdRef="Sequence_90">
                                                                                   <Sequence.Variables>
                                                                                     <Variable x:TypeArguments="x:String" Name="placa" />
                                                                                     <Variable x:TypeArguments="x:String" Name="idComparendo" />
@@ -927,7 +928,7 @@
                                                                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                                     </scg:Dictionary>
                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap:VirtualizedContainerService.HintSize="989,106" sap2010:WorkflowViewState.IdRef="GetValue_33">
+                                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap:VirtualizedContainerService.HintSize="875,106" sap2010:WorkflowViewState.IdRef="GetValue_33">
                                                                                     <ui:GetValue.Target>
                                                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a8858140-077d-47fe-8a01-f901d95ca427" InformativeScreenshot="77454adc2f2af7a0908e4b0a12f148dd" Selector="[&quot;&lt;webctrl src='verificar/contenido_verificar_pago_linea.jsp' tag='FRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='2' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='&quot;+sumarFila.ToString+&quot;' tag='TD' /&gt;&quot;]">
                                                                                         <ui:Target.TimeoutMS>
@@ -942,7 +943,7 @@
                                                                                       <OutArgument x:TypeArguments="x:String">[numeroResolucion2]</OutArgument>
                                                                                     </ui:GetValue.Value>
                                                                                   </ui:GetValue>
-                                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap:VirtualizedContainerService.HintSize="989,106" sap2010:WorkflowViewState.IdRef="GetValue_41">
+                                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap:VirtualizedContainerService.HintSize="875,106" sap2010:WorkflowViewState.IdRef="GetValue_41">
                                                                                     <ui:GetValue.Target>
                                                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b05970da-c463-4a42-9fd8-b9d0384ba3e8" InformativeScreenshot="f5210706ee21d7eea0ec24517f6479ab" Selector="[&quot;&lt;webctrl src='verificar/contenido_verificar_pago_linea.jsp' tag='FRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='2' tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='&quot;+sumarFila.ToString+&quot;' tag='TD' /&gt;&quot;]">
                                                                                         <ui:Target.TimeoutMS>
@@ -957,7 +958,7 @@
                                                                                       <OutArgument x:TypeArguments="x:String">[fechaInfraccion]</OutArgument>
                                                                                     </ui:GetValue.Value>
                                                                                   </ui:GetValue>
-                                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap:VirtualizedContainerService.HintSize="989,106" sap2010:WorkflowViewState.IdRef="GetValue_42">
+                                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap:VirtualizedContainerService.HintSize="875,106" sap2010:WorkflowViewState.IdRef="GetValue_42">
                                                                                     <ui:GetValue.Target>
                                                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ef89b309-6ae5-4131-a2bd-31242e6afb8f" InformativeScreenshot="a69a1f90e30779295e20e743187b6e6e" Selector="[&quot;&lt;webctrl src='verificar/contenido_verificar_pago_linea.jsp' tag='FRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='2' tag='TABLE' /&gt;&lt;webctrl tableCol='4' tableRow='&quot;+sumarFila.ToString+&quot;' tag='TD' /&gt;&quot;]">
                                                                                         <ui:Target.TimeoutMS>
@@ -972,7 +973,7 @@
                                                                                       <OutArgument x:TypeArguments="x:String">[idComparendo]</OutArgument>
                                                                                     </ui:GetValue.Value>
                                                                                   </ui:GetValue>
-                                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap:VirtualizedContainerService.HintSize="989,106" sap2010:WorkflowViewState.IdRef="GetValue_43">
+                                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap:VirtualizedContainerService.HintSize="875,106" sap2010:WorkflowViewState.IdRef="GetValue_43">
                                                                                     <ui:GetValue.Target>
                                                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6290f30c-2c73-4321-b8c2-f32cae32d126" InformativeScreenshot="9bb50852eec42a5ce678cc065c84e048" Selector="[&quot;&lt;webctrl src='verificar/contenido_verificar_pago_linea.jsp' tag='FRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='2' tag='TABLE' /&gt;&lt;webctrl tableCol='6' tableRow='&quot;+sumarFila.ToString+&quot;' tag='TD' /&gt;&quot;]">
                                                                                         <ui:Target.TimeoutMS>
@@ -987,7 +988,7 @@
                                                                                       <OutArgument x:TypeArguments="x:String">[ciudadSecretaria]</OutArgument>
                                                                                     </ui:GetValue.Value>
                                                                                   </ui:GetValue>
-                                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap:VirtualizedContainerService.HintSize="989,106" sap2010:WorkflowViewState.IdRef="GetValue_44">
+                                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap:VirtualizedContainerService.HintSize="875,106" sap2010:WorkflowViewState.IdRef="GetValue_44">
                                                                                     <ui:GetValue.Target>
                                                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="15ec0a8c-35f0-48cd-be1f-a7f202ca00bb" InformativeScreenshot="067da6f4429db565a4b0b7901a2d7e8d" Selector="[&quot;&lt;webctrl src='verificar/contenido_verificar_pago_linea.jsp' tag='FRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='2' tag='TABLE' /&gt;&lt;webctrl tableCol='9' tableRow='&quot;+sumarFila.ToString+&quot;' tag='TD' /&gt;&quot;]">
                                                                                         <ui:Target.TimeoutMS>
@@ -1002,7 +1003,7 @@
                                                                                       <OutArgument x:TypeArguments="x:String">[tipoComparendo]</OutArgument>
                                                                                     </ui:GetValue.Value>
                                                                                   </ui:GetValue>
-                                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap:VirtualizedContainerService.HintSize="989,106" sap2010:WorkflowViewState.IdRef="GetValue_45">
+                                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap:VirtualizedContainerService.HintSize="875,106" sap2010:WorkflowViewState.IdRef="GetValue_45">
                                                                                     <ui:GetValue.Target>
                                                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e4e149b3-518c-4568-9c46-7d651531ccd9" InformativeScreenshot="6d60bf4b3a511b7ec7cf336d18aafee7" Selector="[&quot;&lt;webctrl src='verificar/contenido_verificar_pago_linea.jsp' tag='FRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' idx='2' tag='TABLE' /&gt;&lt;webctrl tableCol='10' tableRow='&quot;+sumarFila.ToString+&quot;' tag='TD' /&gt;&quot;]">
                                                                                         <ui:Target.TimeoutMS>
@@ -1017,7 +1018,7 @@
                                                                                       <OutArgument x:TypeArguments="x:String">[valorPagar]</OutArgument>
                                                                                     </ui:GetValue.Value>
                                                                                   </ui:GetValue>
-                                                                                  <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'TD'" sap:VirtualizedContainerService.HintSize="989,106" sap2010:WorkflowViewState.IdRef="Click_69" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                                                  <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'TD'" sap:VirtualizedContainerService.HintSize="875,106" sap2010:WorkflowViewState.IdRef="Click_69" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                                                     <ui:Click.CursorPosition>
                                                                                       <ui:CursorPosition Position="Center">
                                                                                         <ui:CursorPosition.OffsetX>
@@ -1039,7 +1040,7 @@
                                                                                       </ui:Target>
                                                                                     </ui:Click.Target>
                                                                                   </ui:Click>
-                                                                                  <ui:UiElementExists DisplayName="Element Exists 'TD'" Exists="[resolucionConComparendo]" sap:VirtualizedContainerService.HintSize="989,106" sap2010:WorkflowViewState.IdRef="UiElementExists_9">
+                                                                                  <ui:UiElementExists DisplayName="Element Exists 'TD'" Exists="[resolucionConComparendo]" sap:VirtualizedContainerService.HintSize="875,106" sap2010:WorkflowViewState.IdRef="UiElementExists_9">
                                                                                     <ui:UiElementExists.Target>
                                                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5cb46ccd-582f-4220-8696-7ced13a87232" InformativeScreenshot="fa2ce9c4acc5e742ff68159098f88ffa" Selector="&lt;webctrl src='verificar/contenido_verificar_pago_linea.jsp' tag='FRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr' parentname='formulario' tag='TR' idx='1' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td' parentname='formulario' tableCol='1' tableRow='1' tag='TD' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;">
                                                                                         <ui:Target.TimeoutMS>
@@ -1051,7 +1052,7 @@
                                                                                       </ui:Target>
                                                                                     </ui:UiElementExists.Target>
                                                                                   </ui:UiElementExists>
-                                                                                  <If Condition="[resolucionConComparendo]" sap:VirtualizedContainerService.HintSize="989,6963" sap2010:WorkflowViewState.IdRef="If_18">
+                                                                                  <If Condition="[resolucionConComparendo]" sap:VirtualizedContainerService.HintSize="875,6963" sap2010:WorkflowViewState.IdRef="If_18">
                                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1318,14 +1319,14 @@
                                                                                       </Sequence>
                                                                                     </If.Then>
                                                                                     <If.Else>
-                                                                                      <Sequence sap:VirtualizedContainerService.HintSize="418,620" sap2010:WorkflowViewState.IdRef="Sequence_99">
+                                                                                      <Sequence sap:VirtualizedContainerService.HintSize="304,620" sap2010:WorkflowViewState.IdRef="Sequence_99">
                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                                           </scg:Dictionary>
                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                        <Sequence DisplayName="Sequence escritura excel" sap:VirtualizedContainerService.HintSize="376,66" sap2010:WorkflowViewState.IdRef="Sequence_101">
+                                                                                        <Sequence DisplayName="Sequence escritura excel" sap:VirtualizedContainerService.HintSize="262,66" sap2010:WorkflowViewState.IdRef="Sequence_101">
                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1366,7 +1367,7 @@
                                                                                           <ui:ExcelWriteCell Cell="[&quot;J&quot;+contadorHojaResolucion1.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_159" SheetName="[identificacion.ToString+&quot; -R&quot;]" Text="[tipodocumento]" />
                                                                                           <ui:ExcelWriteCell Cell="[&quot;K&quot;+contadorHojaResolucion1.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_160" SheetName="[identificacion.ToString+&quot; -R&quot;]" Text="[tipoServicio]" />
                                                                                         </Sequence>
-                                                                                        <Assign sap:VirtualizedContainerService.HintSize="376,60" sap2010:WorkflowViewState.IdRef="Assign_65">
+                                                                                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_65">
                                                                                           <Assign.To>
                                                                                             <OutArgument x:TypeArguments="x:Int32">[sumarFila]</OutArgument>
                                                                                           </Assign.To>
@@ -1374,7 +1375,7 @@
                                                                                             <InArgument x:TypeArguments="x:Int32">[sumarFila+1]</InArgument>
                                                                                           </Assign.Value>
                                                                                         </Assign>
-                                                                                        <Assign sap:VirtualizedContainerService.HintSize="376,60" sap2010:WorkflowViewState.IdRef="Assign_76">
+                                                                                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_76">
                                                                                           <Assign.To>
                                                                                             <OutArgument x:TypeArguments="x:Int32">[contadorHojaResolucion1]</OutArgument>
                                                                                           </Assign.To>
@@ -1382,7 +1383,7 @@
                                                                                             <InArgument x:TypeArguments="x:Int32">[contadorHojaResolucion1+1]</InArgument>
                                                                                           </Assign.Value>
                                                                                         </Assign>
-                                                                                        <Assign sap:VirtualizedContainerService.HintSize="376,60" sap2010:WorkflowViewState.IdRef="Assign_66">
+                                                                                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_66">
                                                                                           <Assign.To>
                                                                                             <OutArgument x:TypeArguments="x:Int32">[filaContador]</OutArgument>
                                                                                           </Assign.To>
@@ -1390,7 +1391,7 @@
                                                                                             <InArgument x:TypeArguments="x:Int32">[filaContador+1]</InArgument>
                                                                                           </Assign.Value>
                                                                                         </Assign>
-                                                                                        <Assign sap:VirtualizedContainerService.HintSize="376,60" sap2010:WorkflowViewState.IdRef="Assign_67">
+                                                                                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_67">
                                                                                           <Assign.To>
                                                                                             <OutArgument x:TypeArguments="x:Int32">[contarChild]</OutArgument>
                                                                                           </Assign.To>
@@ -1398,7 +1399,7 @@
                                                                                             <InArgument x:TypeArguments="x:Int32">[contarChild+1]</InArgument>
                                                                                           </Assign.Value>
                                                                                         </Assign>
-                                                                                        <ui:Continue sap:VirtualizedContainerService.HintSize="376,22" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                                                                                        <ui:Continue sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Continue_1" />
                                                                                       </Sequence>
                                                                                     </If.Else>
                                                                                   </If>
@@ -2750,7 +2751,7 @@
                 <OutArgument x:TypeArguments="x:String">[rutaComparendo]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">["C:\Users\jparra\OneDrive\RPA\INTEGRACION\ComparendosINT\"]</InArgument>
+                <InArgument x:TypeArguments="x:String">["C:\Users\jparra\OneDrive\RPA\COMPARENDOS\COMPARENDOSV2\"]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
