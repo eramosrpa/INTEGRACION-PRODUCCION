@@ -1,7 +1,7 @@
 {
   "name": "Integracion",
   "description": "Blank Process",
-  "main": "Main.xaml",
+  "main": "PROGRAMA.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.10.4]",
     "UiPath.Mail.Activities": "[1.10.5]",
@@ -45,8 +45,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "9c56fec8-7717-45cd-8754-196ba2223cc2",
+      "filePath": "PROGRAMA.xaml",
+      "uniqueId": "9d84de5b-5b91-4eb7-be9d-5c94bb4d351b",
       "input": [],
       "output": []
     }
